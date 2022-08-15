@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tools | Sign In</title>
     <link rel="stylesheet" href="CSS/style.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script src = "JS/global.js" defer></script>
+
     <script src="JS/init-firebase.js" defer></script>
     <script src="JS/main.js" defer></script>
 
@@ -16,13 +22,16 @@
     <form>
 
         <div class="input-container">
+            <!-- logo -->
             <label>Username:</label>
             <input type="text" id="username" />
         </div>
 
-        <button id="submit-btn">Submit</button>
-
+        <button id="submit-btn" class="button">Submit</button>
     </form>
+    
+    <a href="input.html"><button id="page-btn" class="button" hidden>Continue</button></a>
+
 </body>
 
 </html>

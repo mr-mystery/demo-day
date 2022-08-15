@@ -6,11 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tools | Input</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src = "JS/global.js" defer></script>
     <script src = "JS/init-firebase.js" defer></script>
-    <script src = "JS/main.js" defer></script>
+    <script src = "JS/input.js" defer></script>
 
 </head>
 <body>
-    
+    <form>
+
+
+        <div class="input-container">
+            <label>Calorie Consumed:</label>
+            <input type="text" id="Consumed" />
+        </div>
+        <div class="input-container">
+            <label>Calorie Burned:</label>
+            <input type="text" id="Burned" />
+        </div>
+        <div class="input-container">
+            <label>Miles Walked:</label>
+            <input type="text" id="Walked" />
+        </div>
+        <div class="input-container">
+            <label>Time Spent Exercising (Minutes):</label>
+            <input type="text" id="exerciseTime" />
+        </div>
+
+        <button id="update-btn" class="button">Update</button>
+
+    </form>
 </body>
 </html>
+
