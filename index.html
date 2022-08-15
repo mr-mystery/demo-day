@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tools | Sign In</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- <script src = "config/global.js" defer></script> -->
+
+    <script src="config/init-firebase.js" defer></script>
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+    <form>
+
+        <div class="input-container">
+            <!-- logo -->
+            <label>Username:</label>
+            <input type="text" id="username" />
+        </div>
+
+        <button id="submit-btn" class="button">Submit</button>
+    </form>
+    
+    <a href="input/"><button id="page-btn" class="button" hidden>Continue</button></a>
+
+</body>
+
+</html>

@@ -15,6 +15,5 @@ function UpdateButton (event) {
         exerciseTime: exerciseTime.value,
     }
 
-    console.log(Data);
-    database.push(Data);
+    database.ref(username).push(Data);
 }
