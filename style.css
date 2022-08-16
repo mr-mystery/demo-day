@@ -1,6 +1,35 @@
 body {
-    background-color: #379c59;
+    background-color: #58d481;
     align-content: space-around;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+button {
+    border-radius: 10px;
+    width: auto;
+    padding: 2%;
+    height: auto;
+    font-size: 2.5vw;
+    margin: 1%;
+}
 
+.input-container {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2%;
+    width: 99%;
+}
+
+input {
+    height: 5vw;
+}
+
+#set label{
+    font-size: 2.5vw;
+}

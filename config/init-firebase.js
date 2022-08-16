@@ -10,4 +10,3 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-let database = firebase.database()
