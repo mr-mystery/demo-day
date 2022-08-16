@@ -21,13 +21,26 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     margin: 2%;
     width: 99%;
 }
 
+#set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#update-btn{
+    width: 40vw;
+}
+
 input {
-    height: 5vw;
+    height: 3vw;
+    width: 45vw;
 }
 
 #set label{

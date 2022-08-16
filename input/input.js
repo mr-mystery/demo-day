@@ -8,7 +8,7 @@ document.getElementById('update-btn').onclick = UpdateButton
 function UpdateButton (event) {
     event.preventDefault()
 
-    console.log(database.ref(username).get())
+   // console.log(database.ref(username).get())
 
     if(Consumed.valueAsNumber == undefined) {
         Consumed.valueAsNumber = 0
@@ -24,11 +24,44 @@ function UpdateButton (event) {
     }
 
     let Data = {
-        Consumed: Consumed.valueAsNumber + database.ref(username).child('Consumed').get(),
-        Burned: Burned.valueAsNumber + database.ref(username).Burned,
-        Walked: Walked.valueAsNumber + database.ref(username).Walked,
-        exerciseTime: exerciseTime.valueAsNumber + database.ref(username).exerciseTime,
+        Consumed: Consumed.valueAsNumber, //+ database.ref(username).child('Consumed').get(),
+        Burned: Burned.valueAsNumber, //+     userObj.get().then((dataSnapshot) => dataSnapshot.val().Burned);        ,
+        Walked: Walked.valueAsNumber, //+ database.ref(username).Walked,
+        exerciseTime: exerciseTime.valueAsNumber, //+ database.ref(username).exerciseTime,
     }
 
-    database.ref(username).set(Data);
+    // database.ref("users/").child(username).set(Data);
+
+    // get OR create the user "tree" in the db
+    let userObj = database.ref(`users/${username}`); 
+
+    // .get() returns a promise to get the value within that user tree
+    userObj.get().then((dataSnapshot) => {
+        // will make this data within the user tree an obj
+        let databaseData = dataSnapshot.val();
+    
+        console.log(databaseData);
+
+        if (databaseData !== null) {
+            Data.Consumed += databaseData.Consumed;
+            Data.Burned += databaseData.Burned;
+            Data.Walked += databaseData.Walked;
+            Data.exerciseTime += databaseData.exerciseTime;
+        }
+
+        localStorage.setItem("Consumed", Data.Consumed);
+        localStorage.setItem("Burned", Data.Burned);
+        localStorage.setItem("Walked", Data.Walked);
+        localStorage.setItem("exerciseTime", Data.exerciseTime);
+
+        console.log(Data);
+        // we update the entire user tree to match Data
+        userObj.set(Data);
+
+        let page = document.querySelector('#page-btn');
+
+        page.style.display = 'block';
+    });
+
+    console.log(userObj);
 }
