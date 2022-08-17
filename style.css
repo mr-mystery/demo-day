@@ -52,6 +52,10 @@ button {
     align-items: center;
 }
 
+#page-btn {
+    display: none;
+}
+
 /* Mainly Input page */
 
 .input-container {
@@ -64,6 +68,7 @@ button {
 .input-container input {
     height: 3vw;
     width: 40vw;
+    font-size: 3vw;
 }
 
 .input-container label {

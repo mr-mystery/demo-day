@@ -3,10 +3,10 @@ let Burned = localStorage.getItem("Burned");
 let Walked = localStorage.getItem("Walked");
 let exerciseTime = localStorage.getItem("exerciseTime");
 
-console.log(Consumed)
-console.log(Burned)
-console.log(Walked)
-console.log(exerciseTime)
+c(Consumed)
+c(Burned)
+c(Walked)
+c(exerciseTime)
 
 const CaloriesGained = document.getElementById('TCG')
 const CalorieBurned = document.getElementById('TCB')
