@@ -13,12 +13,16 @@ const CalorieBurned = document.getElementById('TCB')
 const Calorie = document.getElementById('TC')
 const walked = document.getElementById('TMW')
 const time = document.getElementById('TTSP')
+const mt = document.getElementById('MT')
+const CPM = document.getElementById('CPM')
 
 CaloriesGained.innerHTML = Consumed
 CalorieBurned.innerHTML = Burned
 Calorie.innerHTML = (Consumed - Burned)
 walked.innerHTML = Walked
 time.innerHTML = exerciseTime
+mt.innerHTML = Walked/exerciseTime
+CPM.innerHTML = Burned / exerciseTime
 
 // Dont ask
 function c (e) {
