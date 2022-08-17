@@ -53,3 +53,7 @@ input {
     justify-content: space-around;
     width: 20%;
 }
+
+.input-container label {
+    margin: 5%;
+}

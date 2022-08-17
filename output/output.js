@@ -8,6 +8,7 @@ console.log(Burned)
 console.log(Walked)
 console.log(exerciseTime)
 
+// Dont ask
 function c (e) {
     console.log(e)
 }

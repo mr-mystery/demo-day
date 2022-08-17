@@ -1,2 +1,3 @@
+
 let username = localStorage.getItem("username");
-let database = firebase.database()
+let database = firebase.database();
