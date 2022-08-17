@@ -18,13 +18,6 @@ button {
     background-color: #77bc3f;
 }
 
-.input-container {
-    font-size: 5vw;
-    margin: 2%;
-    width: 50vw;
-    text-align: center;
-}
-
 .flex{
     display: flex;
     justify-content: center;
@@ -32,17 +25,70 @@ button {
     flex-direction: column;
 }
 
-#update-btn{
-    width: 40vw;
+/* Mainly User page */
+
+.button-con .UserButton{
+    margin: 0 5%;
+    padding: 3%;
+    text-align: center;
 }
 
-input {
+#logo {
+    width: 20vw;
+    border-radius: 120px;
+}
+
+.button-con {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+
+.button-con .button{
+    margin: 0 5%;
+    padding: 3%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Mainly Input page */
+
+.input-container {
+    font-size: 5vw;
+    margin: 2%;
+    width: 50vw;
+    text-align: center;
+}
+
+.input-container input {
     height: 3vw;
     width: 40vw;
 }
 
+.input-container label {
+    margin: 5%;
+}
+
 .set label{
     font-size: 2.5vw;
+}
+
+.div1 {
+    display: flex;
+}
+
+/* Mainly Output page */
+
+#Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30vw;
+    background-color: #77bc3f;
+    border-radius: 25px;
+    margin: 2%;
+    padding: 1%;  
 }
 
 .item-con {
@@ -54,48 +100,4 @@ input {
     border-radius: 25px;
     margin: 2%;
     padding: 1%;
-}
-
-#titleee {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 30vw;
-    background-color: #77bc3f;
-    border-radius: 25px;
-    margin: 2%;
-    padding: 1%;  
-}
-
-.input-container label {
-    margin: 5%;
-}
-
-#logo {
-    width: 20vw;
-    border-radius: 120px;
-}
-
-#button {
-    display: flex;
-    flex-direction: row;
-    height: 10vh;
-}
-
-#button .button{
-    margin: 0 5%;
-    padding: 3%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.div1 {
-    display: flex;
-}
-
-#button .bbutton{
-    margin: 0 5%;
-    padding: 3%;
-    text-align: center;
 }
