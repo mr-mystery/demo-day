@@ -24,6 +24,8 @@
 
     <form id="set">
 
+    <div class="div1">
+
         <div class="input-container">
             <label>Calorie Consumed:</label>
             <input type="number" id="Consumed" />
@@ -33,6 +35,10 @@
             <label>Calorie Burned:</label>
             <input type="number" id="Burned" />
         </div>
+
+    </div>
+
+    <div class="div1">
 
         <div class="input-container">
             <label>Miles Walked:</label>
@@ -44,14 +50,21 @@
             <input type="number" id="exerciseTime" />
         </div>
 
+    </div>
+
         <br>
         <br>
 
-        <button id="update-btn" class="button">Update</button>
 
     </form>
 
-    <button id="page-btn" class="button" hidden><a href="../output/">Continue</a></button>
+    <div id="button">
+    
+        <button id="update-btn" class="button">Update</button>
+
+        <button id="page-btn" class="button" onclick = 'location.href = "../output/"' hidden>Continue</button>
+    
+    </div>
 
 </body>
 
