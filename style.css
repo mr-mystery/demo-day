@@ -8,30 +8,24 @@ body {
 }
 
 button {
-    border-radius: 10px;
+    border-radius: 15px;
     width: auto;
-    padding: 2%;
     height: auto;
-    font-size: 2.5vw;
+    padding: 2%;
     margin: 1%;
+    font-size: 2.5vw;
     text-align: center;
-    justify-content: center;
-    align-content: center;
     background-color: #77bc3f;
 }
 
 .input-container {
     font-size: 5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
     margin: 2%;
     width: 50vw;
+    text-align: center;
 }
 
-#set {
+.flex{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +41,7 @@ input {
     width: 40vw;
 }
 
-#set label{
+.set label{
     font-size: 2.5vw;
 }
 
@@ -96,7 +90,12 @@ input {
     align-items: center;
 }
 
-
 .div1 {
     display: flex;
+}
+
+#button .bbutton{
+    margin: 0 5%;
+    padding: 3%;
+    text-align: center;
 }
