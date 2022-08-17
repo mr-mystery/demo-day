@@ -62,3 +62,14 @@ input {
     width: 20vw;
     border-radius: 120px;
 }
+
+#button {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+
+#button button{
+    margin: 0 5%;
+    padding: 3%;
+}
