@@ -5,8 +5,13 @@ const exerciseTime = document.getElementById('exerciseTime');
 
 document.getElementById('update-btn').onclick = UpdateButton;
 
+function addZero(i) {
+    if (i < 10) { i = "0" + i }
+    return i;
+}
+
 function UpdateButton(event) {
-    
+
     event.preventDefault();
 
     if (Consumed.valueAsNumber == undefined) {
@@ -22,11 +27,23 @@ function UpdateButton(event) {
         exerciseTime.valueAsNumber = 0;
     }
 
+    const d = new Date();
+    let month = (d.getMonth() + 1);
+    let day = d.getDate();
+    let year = d.getFullYear();
+    let DaDate = `${month}-${day}-${year}`
+    let hour = addZero(d.getHours());
+    let minutes = addZero(d.getMinutes());
+    let seconds = addZero(d.getSeconds());
+    let DaTime = `${hour}:${minutes}:${seconds}`
+
     let Data = {
         Consumed: Consumed.valueAsNumber,
         Burned: Burned.valueAsNumber,
         Walked: Walked.valueAsNumber,
         exerciseTime: exerciseTime.valueAsNumber,
+        Date: DaDate,
+        Time: DaTime,
     };
 
     // get OR create the user "tree" in the db
@@ -51,6 +68,8 @@ function UpdateButton(event) {
         localStorage.setItem("Burned", Data.Burned);
         localStorage.setItem("Walked", Data.Walked);
         localStorage.setItem("exerciseTime", Data.exerciseTime);
+        localStorage.setItem('Date', Data.Date)
+        localStorage.setItem('Time', Data.Time)
 
         console.log(Data);
 
