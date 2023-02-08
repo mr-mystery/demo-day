@@ -9,8 +9,9 @@
     <title>Fitness Tools | Sign In</title>
     <link rel="stylesheet" href="style.css">
 
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> -->
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script> -->
 
     <script src="config/init-firebase.js" defer></script>
     <script src="main.js" defer></script>
@@ -33,7 +34,7 @@
     
     <div class="button-con">
     
-        <button id="submit-btn" class="UserButton" onclick="AuthGoogle()"> <i src='images/google.svg'></i> Sign in with Google</button>
+        <button id="submit-btn" class="UserButton" onclick="AuthGoogle()">Sign in with Google</button>
 
         <!-- <button id="page-btn" class="UserButton" onclick = 'location.href = "input/"' hidden>Continue</button> -->
     
