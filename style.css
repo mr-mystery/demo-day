@@ -41,7 +41,7 @@ button {
 .button-con {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    /* height: 10vh; */
 }
 
 .button-con .button{
@@ -52,9 +52,9 @@ button {
     align-items: center;
 }
 
-#page-btn {
+/* #page-btn {
     display: none;
-}
+} */
 
 /* Mainly Input page */
 
