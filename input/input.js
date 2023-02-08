@@ -1,3 +1,5 @@
+let username = localStorage.getItem("username");
+
 const Consumed = document.getElementById('Consumed');
 const Burned = document.getElementById('Burned');
 const Walked = document.getElementById('Walked');
@@ -6,9 +8,9 @@ const exerciseTime = document.getElementById('exerciseTime');
 document.getElementById('update-btn').onclick = UpdateButton;
 
 function addZero(i) {
-    if (i < 10) { i = "0" + i }
+    if (i < 10) { i = "0" + i };
     return i;
-}
+};
 
 function UpdateButton(event) {
 
@@ -16,26 +18,26 @@ function UpdateButton(event) {
 
     if (Consumed.valueAsNumber == undefined) {
         Consumed.valueAsNumber = 0;
-    }
+    };
     if (Burned.valueAsNumber == undefined) {
         Burned.valueAsNumber = 0;
-    }
+    };
     if (Walked.valueAsNumber == undefined) {
         Walked.valueAsNumber = 0;
-    }
+    };
     if (exerciseTime.valueAsNumber == undefined) {
         exerciseTime.valueAsNumber = 0;
-    }
+    };
 
     const d = new Date();
     let month = (d.getMonth() + 1);
     let day = d.getDate();
     let year = d.getFullYear();
-    let DaDate = `${month}-${day}-${year}`
+    let DaDate = `${month}-${day}-${year}`;
     let hour = addZero(d.getHours());
     let minutes = addZero(d.getMinutes());
     let seconds = addZero(d.getSeconds());
-    let DaTime = `${hour}:${minutes}:${seconds}`
+    let DaTime = `${hour}:${minutes}:${seconds}`;
 
     let Data = {
         Consumed: Consumed.valueAsNumber,
@@ -62,14 +64,14 @@ function UpdateButton(event) {
             Data.Burned += databaseData.Burned;
             Data.Walked += databaseData.Walked;
             Data.exerciseTime += databaseData.exerciseTime;
-        }
+        };
 
         localStorage.setItem("Consumed", Data.Consumed);
         localStorage.setItem("Burned", Data.Burned);
         localStorage.setItem("Walked", Data.Walked);
         localStorage.setItem("exerciseTime", Data.exerciseTime);
-        localStorage.setItem('Date', Data.Date)
-        localStorage.setItem('Time', Data.Time)
+        localStorage.setItem('Date', Data.Date);
+        localStorage.setItem('Time', Data.Time);
 
         console.log(Data);
 
@@ -83,4 +85,4 @@ function UpdateButton(event) {
     let page = document.querySelector('#page-btn');
 
     page.style.display = 'block';
-}
+};

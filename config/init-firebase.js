@@ -1,4 +1,3 @@
-
 const firebaseConfig = {
     apiKey: "AIzaSyBTkQK_-g52Cz04eCRgKFxir4eDN6eoE_Y",
     authDomain: "fir-day-986a6.firebaseapp.com",
@@ -10,3 +9,4 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+let database = firebase.database();

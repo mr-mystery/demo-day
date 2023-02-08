@@ -1,13 +1,29 @@
-let page = document.getElementById('page-btn');
+// document.getElementById('submit-btn').onclick = UserButton;
 
-document.getElementById('submit-btn').onclick = UserButton
+// function UserButton (event) {
+//     event.preventDefault();
 
-function UserButton (event) {
-    event.preventDefault();
+//     let username = document.querySelector('#username').value;
 
-    let username = document.querySelector('#username').value;
+//     localStorage.setItem("username", username);
 
-    localStorage.setItem("username", username);
+//     document.getElementById('page-btn').style.display = 'block';
+// };
 
-    page.style.display = 'block';
-}
+function AuthGoogle() {
+    firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            let credential = result.credential;
+            let token = credential.accessToken;
+            let user = result.user;
+
+            sessionStorage.setItem("username", user.displayName);
+            window.location="input/";
+        }).catch((error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            let email = error.email;
+            let credential = error.credential;
+            alert("Error: "+ errorMessage);
+        });
+};

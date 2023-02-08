@@ -13,7 +13,6 @@
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <script src="config/init-firebase.js" defer></script>
-    <!-- <script src = "config/global.js" defer></script> -->
     <script src="main.js" defer></script>
 
     <link rel="shortcut icon" href="images/FitnessToolsv2.png"/>
@@ -22,7 +21,7 @@
 
 <body>
 
-    <form>
+    <!-- <form>
 
         <div class="input-container flex">
             <img id='logo'src="images/FitnessTools.png"/>
@@ -30,13 +29,13 @@
             <input type="text" id="username" />
         </div>
 
-    </form>
+    </form> -->
     
     <div class="button-con">
     
-        <button id="submit-btn" class="UserButton">Submit</button>
+        <button id="submit-btn" class="UserButton" onclick="AuthGoogle()">Submit</button>
 
-        <button id="page-btn" class="UserButton" onclick = 'location.href = "input/"' hidden>Continue</button>
+        <!-- <button id="page-btn" class="UserButton" onclick = 'location.href = "input/"' hidden>Continue</button> -->
     
     </div>
 
