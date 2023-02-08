@@ -19,6 +19,7 @@ function AuthGoogle() {
             let user = result.user;
 
             sessionStorage.setItem("username", user.displayName);
+            sessionStorage.setItem("loggedIn", "true");
             window.location="input/";
         }).catch((error) => {
             let errorCode = error.code;

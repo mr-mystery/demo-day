@@ -10,3 +10,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 let database = firebase.database();
+
+function checkCredentials() {
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        window.location = "index.html";
+    };
+};
