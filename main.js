@@ -10,6 +10,7 @@
 //     document.getElementById('page-btn').style.display = 'block';
 // };
 
+let provider = new firebase.auth.GoogleAuthProvider();
 function AuthGoogle() {
     firebase.auth().signInWithPopup(provider)
         .then((result) => {
