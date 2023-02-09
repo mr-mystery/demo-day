@@ -1,16 +1,9 @@
-let username = sessionStorage.getItem("username");
-
 let Consumed = sessionStorage.getItem("Consumed");
 let Burned = sessionStorage.getItem("Burned");
 let Walked = sessionStorage.getItem("Walked");
 let exerciseTime = sessionStorage.getItem("exerciseTime");
 let DaDate = sessionStorage.getItem('Date')
 let DaTime = sessionStorage.getItem('Time')
-
-console.log(Consumed)
-console.log(Burned)
-console.log(Walked)
-console.log(exerciseTime)
 
 const CaloriesGained = document.getElementById('TCG')
 const CalorieBurned = document.getElementById('TCB')
@@ -29,3 +22,5 @@ time.innerHTML = exerciseTime;
 mt.innerHTML = (Walked/exerciseTime);
 CPM.innerHTML = (Burned / exerciseTime);
 last.innerHTML = `${DaDate} at ${DaTime}`;
+
+document.getElementById('yourInfo').innerHTML = sessionStorage.getItem("username");
