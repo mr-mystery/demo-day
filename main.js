@@ -5,7 +5,7 @@
 
 //     let username = document.querySelector('#username').value;
 
-//     localStorage.setItem("username", username);
+//     sessionStorage.setItem("username", username);
 
 //     document.getElementById('page-btn').style.display = 'block';
 // };
@@ -22,10 +22,10 @@ function AuthGoogle() {
             sessionStorage.setItem("loggedIn", "true");
             window.location="input/";
         }).catch((error) => {
-            let errorCode = error.code;
+            // let errorCode = error.code;
             let errorMessage = error.message;
-            let email = error.email;
-            let credential = error.credential;
+            // let email = error.email;
+            // let credential = error.credential;
             alert("Error: "+ errorMessage);
         });
 };

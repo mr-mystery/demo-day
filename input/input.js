@@ -1,4 +1,4 @@
-let username = localStorage.getItem("username");
+let username = sessionStorage.getItem("username");
 
 const Consumed = document.getElementById('Consumed');
 const Burned = document.getElementById('Burned');
@@ -66,12 +66,12 @@ function UpdateButton(event) {
             Data.exerciseTime += databaseData.exerciseTime;
         };
 
-        localStorage.setItem("Consumed", Data.Consumed);
-        localStorage.setItem("Burned", Data.Burned);
-        localStorage.setItem("Walked", Data.Walked);
-        localStorage.setItem("exerciseTime", Data.exerciseTime);
-        localStorage.setItem('Date', Data.Date);
-        localStorage.setItem('Time', Data.Time);
+        sessionStorage.setItem("Consumed", Data.Consumed);
+        sessionStorage.setItem("Burned", Data.Burned);
+        sessionStorage.setItem("Walked", Data.Walked);
+        sessionStorage.setItem("exerciseTime", Data.exerciseTime);
+        sessionStorage.setItem('Date', Data.Date);
+        sessionStorage.setItem('Time', Data.Time);
 
         console.log(Data);
 
@@ -82,7 +82,8 @@ function UpdateButton(event) {
 
     console.log(userObj);
 
-    let page = document.querySelector('#page-btn');
+    // let page = document.querySelector('#page-btn');
+    // page.style.display = 'block';
 
-    page.style.display = 'block';
+    window.location = "../output/index.html"
 };

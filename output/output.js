@@ -1,11 +1,11 @@
-let username = localStorage.getItem("username");
+let username = sessionStorage.getItem("username");
 
-let Consumed = localStorage.getItem("Consumed");
-let Burned = localStorage.getItem("Burned");
-let Walked = localStorage.getItem("Walked");
-let exerciseTime = localStorage.getItem("exerciseTime");
-let DaDate = localStorage.getItem('Date')
-let DaTime = localStorage.getItem('Time')
+let Consumed = sessionStorage.getItem("Consumed");
+let Burned = sessionStorage.getItem("Burned");
+let Walked = sessionStorage.getItem("Walked");
+let exerciseTime = sessionStorage.getItem("exerciseTime");
+let DaDate = sessionStorage.getItem('Date')
+let DaTime = sessionStorage.getItem('Time')
 
 console.log(Consumed)
 console.log(Burned)

@@ -1,23 +1,19 @@
-body {
+body{
     background-color: #77bc3fd0;
-    align-content: space-around;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* align-content: space-around; */
+
+    min-height: 100vh;
+    margin: 0px;
 }
 
-button {
-    border-radius: 15px;
-    width: auto;
-    height: auto;
-    padding: 2%;
-    margin: 1%;
-    font-size: 2.5vw;
-    text-align: center;
-    background-color: #77bc3f;
+.d-flex{
+    display: flex;
 }
-
 .flex{
     display: flex;
     justify-content: center;
@@ -25,81 +21,56 @@ button {
     flex-direction: column;
 }
 
+button{
+    border-radius: 15px;
+    padding: 2%;
+    margin: 1%;
+    font-size: clamp(30px, 2.5vw, 50px);
+    text-align: center;
+    background-color: #77bc3f;
+}
+button:hover{
+    opacity: 0.5;
+}
+
+
+
 /* Mainly User page */
 
-.button-con .UserButton{
-    margin: 0 5%;
-    padding: 3%;
-    text-align: center;
+#logo{
+    width: 30vw;
+    border-radius: 7vw;
 }
 
-#logo {
-    width: 27vw;
-    border-radius: 120px;
-}
 
-.button-con {
-    display: flex;
-    flex-direction: row;
-    /* height: 10vh; */
-}
-
-/* .button-con button{
-    margin: 0 5%;
-    padding: 3%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-} */
-
-/* #page-btn {
-    display: none;
-} */
 
 /* Mainly Input page */
 
-.input-container {
-    font-size: 5vw;
-    margin: 2%;
-    width: 50vw;
+.input-container{
+    width: clamp(350px, 70vw, 650px);
     text-align: center;
 }
 
-.input-container input {
-    height: 3vw;
-    width: 40vw;
-    font-size: 3vw;
+.input-container input{
+    height: clamp(20px, 3vw, 55px);
+    width: 90%;
+    font-size: clamp(30px, 2.5vw, 50px);
 }
 
-.input-container label {
+.input-container label{
     margin: 5%;
+    font-size: clamp(30px, 2.5vw, 50px);
 }
 
-.set label{
-    font-size: 2.5vw;
-}
 
-.div1 {
-    display: flex;
-}
 
 /* Mainly Output page */
 
-#Info {
+#info, .item-con{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30vw;
-    background-color: #77bc3f;
-    border-radius: 25px;
-    margin: 2%;
-    padding: 1%;  
-}
 
-.item-con {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 30vw;
     background-color: #77bc3f;
     border-radius: 25px;
